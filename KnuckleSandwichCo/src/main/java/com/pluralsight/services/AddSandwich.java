@@ -14,11 +14,10 @@ public class AddSandwich extends OrderScreen
         System.out.println();
         System.out.println("*".repeat(70));
         System.out.println();
-        System.out.println("                         Create your Sandwich ");
+        System.out.println("                        Create your Sandwich ");
         System.out.println();
         System.out.println("*".repeat(70));
 
-        // Prompt the user for sandwich options
         selectBread();
         selectSize();
         selectToppings();
@@ -26,55 +25,42 @@ public class AddSandwich extends OrderScreen
     }
 
     private void selectBread() {
+        System.out.println("Bread Options (White, Wheat, Rye, Wrap) ");
         System.out.println("Select your Bread Type: ");
-        System.out.println();
-        System.out.println("1) White ");
-        System.out.println("2) Wheat ");
-        System.out.println("3) Rye ");
-        System.out.println("4) Wrap ");
-        System.out.println();
-        int choice = Integer.parseInt(userInput.nextLine().trim());
-
-        switch (choice) {
-            case 1:
-                addWhiteBread();
-                break;
-            case 2:
-                addWheatBread();
-                break;
-            case 3:
-                addRyeBread();
-                break;
-            case 4:
-                addWrap();
-                break;
-            default:
-                System.out.println();
-                System.out.println("Invalid selection. ");
-                System.exit(1);
-        }
+        String breadType = userInput.nextLine(); // prompt the user for bread type
+        System.out.println("_".repeat(70));
     }
 
-    // bread options
-    private void addWrap() {
-    }
-
-    private void addRyeBread() {
-    }
-
-    private void addWheatBread() {
-    }
-
-    private void addWhiteBread() {
-    }
-
-    // sandwich options
     private void selectSize() {
+        System.out.println("Sandwich Size Options in Inches (4, 8, 12) ");
         System.out.println("Select your Sandwich Size: ");
+        int sandwichSize = Integer.parseInt(userInput.nextLine()); // prompt the user for sandwich size
+        System.out.println("_".repeat(70));
     }
 
     private void selectToppings() {
+        System.out.println("Topping Options: ");
+        System.out.println("Meats - ");
+        System.out.println("(Steak, Ham, Salami, Roast Beef, Chicken, Bacon)");
+        System.out.println("Select your Meats: ");
+
+        System.out.println("Cheese's - ");
+        System.out.println("(American, Provolone, Cheddar, Swiss)");
+        System.out.println("Select your Cheese's: ");
+
+        System.out.println("Regular Toppings - ");
+        System.out.println("(Lettuce, Peppers, Onions, Tomatoes, Jalapenos, \n Cucumbers, Pickles, Guacamole, Mushrooms)");
         System.out.println("Select your Toppings: ");
+
+        System.out.println("Sauces - ");
+        System.out.println("(Mayo, Mustard, Ketchup, Ranch, Thousand Island, Vinaigrette)");
+        System.out.println("Select your Sauces: ");
+
+        System.out.println("Sides - ");
+        System.out.println("(Au Jus, Sauce)");
+        System.out.println("Select your Sides: ");
+
+        System.out.println();
     }
 
     private void selectToasted() {

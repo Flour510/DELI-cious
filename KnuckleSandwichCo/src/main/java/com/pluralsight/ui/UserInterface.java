@@ -29,7 +29,7 @@ public class UserInterface
                 System.out.println("1) New Order ");
                 System.out.println("0) Exit ");
                 System.out.println();
-                System.out.println("Make a selection below: ");
+                System.out.println("Make a selection: ");
                 int choice = Integer.parseInt(userInput.nextLine().strip());
                 System.out.println();
 
