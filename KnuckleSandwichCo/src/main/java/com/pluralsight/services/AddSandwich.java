@@ -39,32 +39,36 @@ public class AddSandwich extends OrderScreen
     }
 
     private void selectToppings() {
-        System.out.println("Topping Options: ");
-        System.out.println("Meats - ");
-        System.out.println("(Steak, Ham, Salami, Roast Beef, Chicken, Bacon)");
+        System.out.println("Meat Topping Options (Steak, Ham, Salami, Roast Beef, Chicken, Bacon)");
         System.out.println("Select your Meats: ");
+        String meatType = userInput.nextLine(); // prompt the user for meat type
+        System.out.println("_".repeat(70));
 
-        System.out.println("Cheese's - ");
-        System.out.println("(American, Provolone, Cheddar, Swiss)");
+        System.out.println("Cheese Topping Options (American, Provolone, Cheddar, Swiss)");
         System.out.println("Select your Cheese's: ");
+        String cheeseType = userInput.nextLine(); // prompt the user for cheese type
+        System.out.println("_".repeat(70));
 
-        System.out.println("Regular Toppings - ");
-        System.out.println("(Lettuce, Peppers, Onions, Tomatoes, Jalapenos, \n Cucumbers, Pickles, Guacamole, Mushrooms)");
+        System.out.println("Regular Topping Options (Lettuce, Peppers, Onions, Tomatoes, Jalapenos,\nCucumbers, Pickles, Guacamole, Mushrooms)");
         System.out.println("Select your Toppings: ");
+        String toppingsType = userInput.nextLine(); // prompt the user for toppings type
+        System.out.println("_".repeat(70));
 
-        System.out.println("Sauces - ");
-        System.out.println("(Mayo, Mustard, Ketchup, Ranch, Thousand Island, Vinaigrette)");
+        System.out.println("Sauce Topping Options (Mayo, Mustard, Ketchup, Ranch, Thousand Island,\nVinaigrette)");
         System.out.println("Select your Sauces: ");
+        String sauceType = userInput.nextLine(); // prompt the user for sauce type
+        System.out.println("_".repeat(70));
 
-        System.out.println("Sides - ");
-        System.out.println("(Au Jus, Sauce)");
+        System.out.println("Sides Topping Options (Au Jus, Sauce)");
         System.out.println("Select your Sides: ");
-
-        System.out.println();
+        String sideType = userInput.nextLine(); // prompt the user for side type
+        System.out.println("_".repeat(70));
     }
 
     private void selectToasted() {
         System.out.println("Would you like the Sandwich Toasted? (yes/no): ");
+        String toastedOption = userInput.nextLine(); // prompt the user for toasted option
+        System.out.println("_".repeat(70));
     }
 
 
