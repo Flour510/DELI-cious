@@ -14,11 +14,11 @@ public class OrderScreen
         while (true) {
             try {
                 // print the place an order screen
-                System.out.println("*".repeat(70));
+                System.out.println("*".repeat(85));
                 System.out.println();
-                System.out.println("                           Place New Order ");
+                System.out.println("                                  Place New Order ");
                 System.out.println();
-                System.out.println("*".repeat(70));
+                System.out.println("*".repeat(85));
                 System.out.println("What do you want to do? ");
                 System.out.println();
                 System.out.println("1) Add Sandwich ");
@@ -27,8 +27,9 @@ public class OrderScreen
                 System.out.println("4) Checkout ");
                 System.out.println("0) Cancel Order ");
                 System.out.println();
-                System.out.println("Enter your choice: ");
+                System.out.println("Enter your choice below: \uD83D\uDC47");
                 int choice = Integer.parseInt(userInput.nextLine().strip());
+                System.out.println();
 
                 switch (choice) {
                     case 1:
@@ -44,7 +45,8 @@ public class OrderScreen
                         addChips.display();
                         break;
                     case 4:
-                        new Checkout();
+                        Checkout checkout = new Checkout();
+                        checkout.display();
                         break;
                     case 0:
                         System.out.println();

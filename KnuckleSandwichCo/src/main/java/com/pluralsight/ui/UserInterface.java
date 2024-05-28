@@ -10,9 +10,9 @@ public class UserInterface
     {
         // greeting
         System.out.println();
-        System.out.println("                   Welcome to Knuckle Sandwich Co. ");
-        System.out.println("               \uD83E\uDD64 Serving the Bay Area since 1996! \uD83E\uDD6A");
-        System.out.println("*".repeat(70));
+        System.out.println("           W e l c o m e   t o   K n u c k l e   S a n d w i c h    C o. ");
+        System.out.println("                     \uD83E\uDD64 Serving the Bay Area since 1996! \uD83E\uDD6A");
+        System.out.println("*".repeat(85));
 
         while (true)
         {
@@ -20,9 +20,9 @@ public class UserInterface
             {
                 // home screen
                 System.out.println();
-                System.out.println("                                Home ");
+                System.out.println("                                       Home ");
                 System.out.println();
-                System.out.println("*".repeat(70));
+                System.out.println("*".repeat(85));
 
                 // home options
                 System.out.println();

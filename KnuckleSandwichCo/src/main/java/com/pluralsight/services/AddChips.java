@@ -14,12 +14,12 @@ public class AddChips extends OrderScreen
         {
             // display the add chips screen
             System.out.println();
-            System.out.println("*".repeat(70));
+            System.out.println("*".repeat(85));
             System.out.println();
-            System.out.println("                          Choose Your Chips ");
-            System.out.println("                          (All Chips $1.50) ");
+            System.out.println("                                 Choose Your Chips ");
+            System.out.println("                                 (All Chips $1.50) ");
             System.out.println();
-            System.out.println("*".repeat(70));
+            System.out.println("*".repeat(85));
 
         } catch (Exception ex) {
             System.out.println();
@@ -34,7 +34,7 @@ public class AddChips extends OrderScreen
         System.out.println("Chip Options (Hot Cheetos, Doritos, Lays, Lays BBQ) ");
         System.out.println("Select Chip Type: ");
         String chipType = userInput.nextLine(); // prompt the user for chip type
-        System.out.println("_".repeat(70));
+        System.out.println("_".repeat(85));
 
         // prompt the user to make their next move
         // provides user with an option to add more chips or to exit the application
@@ -45,9 +45,10 @@ public class AddChips extends OrderScreen
         System.out.println("B - Return to Place New Order Menu");
         System.out.println("C - Exit the App ");
         System.out.println();
-        System.out.println("Enter your choice below: ");
+        System.out.println("Enter your choice below: \uD83D\uDC47");
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine();
+        System.out.println();
 
         // process the users choice
         switch (choice.toUpperCase()) {
