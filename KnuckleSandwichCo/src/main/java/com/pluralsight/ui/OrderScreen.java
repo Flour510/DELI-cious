@@ -1,6 +1,9 @@
 package com.pluralsight.ui;
 
+import com.pluralsight.services.AddChips;
+import com.pluralsight.services.AddDrink;
 import com.pluralsight.services.AddSandwich;
+import com.pluralsight.services.Checkout;
 
 import static com.pluralsight.ui.UserInterface.userInput;
 
@@ -33,11 +36,15 @@ public class OrderScreen
                         addSandwich.display();
                         break;
                     case 2:
-
+                        AddDrink addDrink = new AddDrink();
+                        addDrink.display();
                         break;
                     case 3:
+                        AddChips addChips = new AddChips();
+                        addChips.display();
                         break;
                     case 4:
+                        new Checkout();
                         break;
                     case 0:
                         System.out.println();
