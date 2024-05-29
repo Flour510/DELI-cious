@@ -1,4 +1,4 @@
-package com.pluralsight.services;
+package com.pluralsight.models;
 
 import com.pluralsight.ui.OrderScreen;
 
@@ -8,7 +8,7 @@ public class AddChips extends OrderScreen
 {
     static Scanner userInput = new Scanner(System.in);
 
-    public void display ()
+    public void display (Chips chip)
     {
         try
         {
@@ -26,14 +26,15 @@ public class AddChips extends OrderScreen
             System.out.println("Invalid Input. ");
         }
 
-        chooseChips();
+        chooseChips(chip);
     }
 
-    private void chooseChips ()
+    private void chooseChips (Chips chips)
     {
         System.out.println("Chip Options (Hot Cheetos, Doritos, Lays, Lays BBQ) ");
         System.out.println("Select Chip Type: ");
         String chipType = userInput.nextLine(); // prompt the user for chip type
+        chips.setType(chipType);
         System.out.println("_".repeat(85));
 
         // prompt the user to make their next move

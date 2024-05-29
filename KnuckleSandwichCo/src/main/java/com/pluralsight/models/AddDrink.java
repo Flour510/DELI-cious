@@ -1,4 +1,4 @@
-package com.pluralsight.services;
+package com.pluralsight.models;
 
 import com.pluralsight.ui.OrderScreen;
 
@@ -8,7 +8,7 @@ public class AddDrink extends OrderScreen
 {
     static Scanner userInput = new Scanner(System.in);
 
-    public void display ()
+    public void display (Drink drink)
     {
         try
         {
@@ -25,20 +25,21 @@ public class AddDrink extends OrderScreen
             System.out.println("Invalid Input. ");
         }
 
-        chooseADrink();
+        chooseADrink(drink);
     }
 
-    private void chooseADrink ()
+    private void chooseADrink (Drink drink)
     {
         System.out.println("Drink Options (Coke, Sprite, Orange Fanta, Lemonade) ");
         System.out.println("Select Drink Type: ");
         String drinkType = userInput.nextLine(); // prompt the user for drink type
+        drink.setName(drinkType);
         System.out.println("_".repeat(85));
         System.out.println("Drink Size (S $2.00 | M $2.50 | L $3.00) ");
         System.out.println("Select Drink Size: ");
         String drinkSize = userInput.nextLine(); // prompt the user for drink size
         System.out.println("_".repeat(85));
-
+         drink.setSize(drinkSize);
         // prompt the user to make their next move
         // provides user with an option to add another drink or to exit the application
         System.out.println();

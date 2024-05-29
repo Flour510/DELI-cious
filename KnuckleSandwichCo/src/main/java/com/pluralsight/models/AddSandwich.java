@@ -1,15 +1,17 @@
-package com.pluralsight.services;
+package com.pluralsight.models;
 
-import com.pluralsight.ui.OrderScreen;
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
-public class AddSandwich extends OrderScreen
+public class AddSandwich
 {
         static Scanner userInput = new Scanner(System.in);
 
-        public void display ()
+        public Sandwich display (Sandwich sandwich)
         {
+
             try
             {
                 // display the add sandwich screen
@@ -20,72 +22,78 @@ public class AddSandwich extends OrderScreen
                 System.out.println();
                 System.out.println("*".repeat(85));
 
-                selectBread();
-                selectSize();
-                selectToppings();
-                selectToasted();
+                String bread = selectBread();
+                sandwich.setBreadType(bread);
+
+                //Size sizeObject = new Size();
+                //int sizeValue = selectSize();
+                //sizeObject.setSize(sizeValue);
+
+                selectSize(sandwich);
+                selectToppings(sandwich);
+                selectToasted(sandwich);
 
             } catch (Exception ex) {
                 System.out.println();
                 System.out.println("Invalid Input. ");
             }
-
+            return sandwich;
         }
 
-        private void selectBread ()
+        private String selectBread ()
         {
             System.out.println("Bread Options (White, Wheat, Rye, Wrap) ");
             System.out.println("Select your Bread Type: ");
             String breadType = userInput.nextLine(); // prompt the user for bread type
+
             System.out.println("_".repeat(85));
+            return breadType;
         }
 
-        private void selectSize ()
+        private int selectSize (Sandwich sandwich)
         {
             System.out.println("Sandwich Size Options in Inches (4' $5.50 | 8' $7.00 | 12' $8.50) ");
             System.out.println("Select your Sandwich Size: ");
             int sandwichSize = Integer.parseInt(userInput.nextLine()); // prompt the user for sandwich size
+
+            sandwich.setSize(sandwichSize);
             System.out.println("_".repeat(85));
+            return sandwichSize;
         }
 
-        private void selectToppings () {
+        private void selectToppings (Sandwich sandwich) {
+            int size = sandwich.getSize();
             // meat options
             System.out.println("Meat Topping Options (Steak, Ham, Salami, Roast Beef, Chicken, Bacon) ");
             System.out.println("Price of Meat Based on Sandwich Size in Inches (4' $1.00 | 8' $2.00 | 12' $3.00) ");
             System.out.println("Select your Meat's below: \uD83D\uDC47");
+            System.out.println("Please separate your selections using commas: \uD83D\uDC47");
             String meatType = userInput.nextLine(); // prompt the user for meat type
-            System.out.println("_".repeat(85));
+            List<String> meatsArr = Arrays.stream(meatType.split(",")).toList();
 
-            // extra meat options
-            System.out.println("Price of Extra Meat Based on Sandwich Size in Inches (4' $.50 | 8' $1.00 | 12' $1.50) ");
-            System.out.println("Add Extra Meat's? (yes/no) ");
-            String extraMeatUserChoice =  userInput.nextLine(); // prompt the user if they want to add extra meat
-            System.out.println("_".repeat(85));
-            System.out.println("Select your Extra Meat's below: \uD83D\uDC47");
-            String extraMeat = userInput.nextLine();
+            sandwich.setMeats(meatsArr);
+//
+
             System.out.println("_".repeat(85));
 
             // cheese options
             System.out.println("Cheese Topping Options (American, Provolone, Cheddar, Swiss)");
             System.out.println("Price of Cheese Based on Sandwich Size in Inches (4' $.75 | 8' $1.50 | 12' $2.25) ");
             System.out.println("Select your Cheese's below: \uD83D\uDC47");
+            System.out.println("Please separate your selections using commas: \uD83D\uDC47");
             String cheeseType = userInput.nextLine(); // prompt the user for cheese type
-            System.out.println("_".repeat(85));
-
-            // extra cheese options
-            System.out.println("Price of Extra Cheese Based on Sandwich Size in Inches (4' $.30 | 8' $.60 | 12' $.90) ");
-            System.out.println("Add Extra Cheese's? (yes/no) ");
-            String extraCheeseUserChoice =  userInput.nextLine(); // prompt the user if they want to add extra cheese's
-            System.out.println("_".repeat(85));
-            System.out.println("Select your Extra Cheese's below: \uD83D\uDC47");
-            String extraCheese = userInput.nextLine();
+            List<String> cheesesArr = Arrays.stream(cheeseType.split(",")).toList();
+            sandwich.setCheeses(cheesesArr);
             System.out.println("_".repeat(85));
 
             // regular topping options
             System.out.println("Regular Topping Options (Lettuce, Peppers, Onions, Tomatoes, Jalapenos, Cucumbers,\nPickles, Guacamole, Mushrooms)");
             System.out.println("(Regular Toppings Are Included in Sandwich Price) ");
             System.out.println("Select your Toppings: ");
+            System.out.println("Please separate your selections using commas: \uD83D\uDC47");
             String toppingsType = userInput.nextLine(); // prompt the user for toppings type
+            List<String> toppingsArr = Arrays.stream(toppingsType.split(",")).toList();
+            sandwich.setRegToppings(toppingsArr);
             System.out.println("_".repeat(85));
 
             // sauce options
@@ -103,46 +111,14 @@ public class AddSandwich extends OrderScreen
             System.out.println("_".repeat(85));
         }
 
-        private void selectToasted () {
+        private void selectToasted (Sandwich sandwich) {
             System.out.println("Would you like the Sandwich Toasted? (yes/no): ");
             String toastedOption = userInput.nextLine(); // prompt the user for toasted option
+            sandwich.setToasted(toastedOption.equalsIgnoreCase("yes"));
             System.out.println();
             System.out.println("*".repeat(85));
             System.out.println();
-            System.out.println("\uD83D\uDD25 E x c e l l e n t,  Y o u r   o r d e r   i s     b e i n g   p r e p a r e d! \uD83D\uDD25");
-            System.out.println();
-            System.out.println("*".repeat(85));
 
-            // prompt the user to make their next move
-            // provides user with an option to start another sandwich order or to exit the application
-            System.out.println();
-            System.out.println("What do you want to do next? ");
-            System.out.println();
-            System.out.println("A - Start a New Sandwich Order ");
-            System.out.println("B - Return to Place New Order Menu");
-            System.out.println("C - Exit the App ");
-            System.out.println();
-            System.out.println("Enter your choice below: \uD83D\uDC47");
-            Scanner scanner = new Scanner(System.in);
-            String choice = scanner.nextLine();
 
-            // process the users choice
-            switch (choice.toUpperCase()) {
-                case "A":
-                    display();
-                    break;
-                case "B":
-                    new OrderScreen();
-                    break;
-                case "C":
-                    System.out.println();
-                    System.out.println("Goodbye for now!");
-                    System.out.println("👋");
-                    System.exit(1); // can recycle this for all exits
-                default:
-                    System.out.println();
-                    System.out.println("Invalid Selection. ");
-                    break;
-            }
         }
 }
