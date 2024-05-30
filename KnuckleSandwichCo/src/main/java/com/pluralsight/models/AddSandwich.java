@@ -23,17 +23,17 @@ public class AddSandwich
                 System.out.println("                           Sandwich Size Options in Inches ");
                 System.out.println("                          (4' $5.50 | 8' $7.00 | 12' $8.50) ");
                 System.out.println();
-                System.out.println("                     Price of Meat Based on Sandwich Size in Inches ");
-                System.out.println("                           (4' $1.00 | 8' $2.00 | 12' $3.00) ");
+                System.out.println("                    Price of Meat Based on Sandwich Size in Inches ");
+                System.out.println("                          (4' $1.00 | 8' $2.00 | 12' $3.00) ");
                 System.out.println();
-                System.out.println("                    Price of Cheese Based on Sandwich Size in Inches ");
-                System.out.println("                           (4' $.75 | 8' $1.50 | 12' $2.25) ");
+                System.out.println("                   Price of Cheese Based on Sandwich Size in Inches ");
+                System.out.println("                          (4' $.75 | 8' $1.50 | 12' $2.25) ");
                 System.out.println();
-                System.out.println("                    (Regular Toppings Are Included in Sandwich Price) ");
+                System.out.println("                   (Regular Toppings Are Included in Sandwich Price) ");
                 System.out.println();
-                System.out.println("                        (Sauces Are Included in Sandwich Price) ");
+                System.out.println("                       (Sauces Are Included in Sandwich Price) ");
                 System.out.println();
-                System.out.println("                        (Sides Are Included in Sandwich Price) ");
+                System.out.println("                       (Sides Are Included in Sandwich Price) ");
                 System.out.println();
                 System.out.println("*".repeat(85));
 
@@ -53,7 +53,7 @@ public class AddSandwich
 
         private String selectBread ()
         {
-            System.out.println("Bread Options (White, Bolillo, Wheat, Rye, Wrap) ");
+            System.out.println("Bread Options (White, Wheat, Rye, Wrap) ");
             System.out.println("Select Bread Type: \uD83D\uDC47");
             String breadType = userInput.nextLine(); // prompt the user for bread type
             System.out.println("_".repeat(85));
@@ -73,8 +73,8 @@ public class AddSandwich
         private void selectToppings (Sandwich sandwich) {
             int size = sandwich.getSize();
             // meat options
-            System.out.println("Meat Options (Asada, Ham, Steak, Salami, Roast Beef, Chicken, Bacon) ");
-            System.out.println("Select Meat's below (Please separate your selections using commas & no spaces): \uD83D\uDC47 ");
+            System.out.println("Meat Options (Ham, Steak, Salami, Roast Beef, Chicken, Bacon) ");
+            System.out.println("Select Meat's below (Please separate your selections using commas): \uD83D\uDC47 ");
             String meatType = userInput.nextLine(); // prompt the user for meat type
 
             List<String> meatsArr = Arrays.stream(meatType.split(",")).toList();
@@ -83,7 +83,7 @@ public class AddSandwich
 
             // cheese options
             System.out.println("Cheese Options (Queso Fresco, American, Provolone, Cheddar, Swiss)");
-            System.out.println("Select Cheese's below (Please separate your selections using commas & no spaces): \uD83D\uDC47");
+            System.out.println("Select Cheese's below: \uD83D\uDC47");
             String cheeseType = userInput.nextLine(); // prompt the user for cheese type
 
             List<String> cheesesArr = Arrays.stream(cheeseType.split(",")).toList();
@@ -92,7 +92,7 @@ public class AddSandwich
 
             // regular topping options
             System.out.println("Regular Topping Options (Lettuce, Peppers, Onions, Tomatoes, Jalapenos, Cucumbers,\nPickles, Guacamole, Mushrooms)");
-            System.out.println("Select Toppings below (Please separate your selections using commas & no spaces): \uD83D\uDC47");
+            System.out.println("Select Toppings below: \uD83D\uDC47");
             String toppingsType = userInput.nextLine(); // prompt the user for toppings type
 
             List<String> toppingsArr = Arrays.stream(toppingsType.split(",")).toList();

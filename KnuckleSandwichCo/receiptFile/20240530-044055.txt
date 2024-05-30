@@ -1,0 +1,19 @@
+S A N D W I C H ⬇️
+Size = 12
+Bread Type = White
+Regular Toppings = [Lettuce,  Peppers]
+Meats = [Ham,  Steak,  Bacon]
+Cheeses = [Queso Fresco,  American,  Swiss,  Cheddar]
+Toasted = true
+Price = $ 19.45
+
+D R I N K ⬇️
+Name = Orange Fanta
+Size = L
+Price = $ 3.0
+
+C H I P S ⬇️
+Type = Hot Cheetos
+Price = $ 1.5
+
+Subtotal: $ 23.95

@@ -1,6 +1,0 @@
-D R I N K ⬇️
-Name = Coke
-Size = L
-Price = $ 3.0
-
-Subtotal: $ 3.0
