@@ -4,17 +4,15 @@ public class Chips extends Product
 {
     private String type;
 
-
     public Chips(String type) {
         this.type = type;
-      price = 1.50;
+        price = 1.50;
     }
 
     public Chips() {
         price = 1.50;
     }
 
-    // getters and setters
     public String getType() {
         return type;
     }
@@ -23,7 +21,6 @@ public class Chips extends Product
         this.type = type;
     }
 
-
     @Override
     public double calculatePrice() {
         return price;
@@ -31,9 +28,6 @@ public class Chips extends Product
 
     @Override
     public String toString() {
-        return "Chips{" +
-                "type='" + type + '\'' +
-                ", price=" + price +
-                '}';
+        return "C H I P S ⬇\uFE0F" + "\n" + "Type = " + type + "\n" + "Price = $ " + price + "\n";
     }
 }

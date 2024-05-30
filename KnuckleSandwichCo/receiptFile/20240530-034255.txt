@@ -1,0 +1,19 @@
+S A N D W I C H ⬇️
+Size = 12
+Bread Type = White
+Regular Toppings = [Mushrooms]
+Meats = [Asada, Ham, Steak]
+Cheeses = [Queso Fresco, Swiss]
+Toasted = true
+Price = $ 17.65
+
+D R I N K ⬇️
+Name = Coke
+Size = L
+Price = $ 3.0
+
+C H I P S ⬇️
+Type = Doritos
+Price = $ 1.5
+
+Subtotal: $ 22.15

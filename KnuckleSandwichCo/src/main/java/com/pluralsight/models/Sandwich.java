@@ -2,15 +2,14 @@ package com.pluralsight.models;
 
 import java.util.List;
 
-public class Sandwich extends Product {
-
+public class Sandwich extends Product
+{
     private int size;
     private String breadType;
     private List<String> regToppings;
     private List<String> meats;
     private List<String> cheeses;
     private boolean toasted;
-
 
     public Sandwich() {
 
@@ -69,114 +68,90 @@ public class Sandwich extends Product {
     }
 
     @Override
-
-    public double calculatePrice() {
-
-       // this is where the logic will go
-        // to calculate the orice if a sandwich with all topics
-        //meats and cheeses
-
-
-        //pprice for 4 in + toppinng
+    public double calculatePrice()
+    {
+        // logic to calculate the price of a sandwich with all toppings (meats and cheeses)
+        // price for 4 inch + toppings
         if(size == 4){
             price += 5.50;
 
-            System.out.println( price + " in the sandwich class");
+            System.out.println(price + " in the sandwich class. " );
 
-            //add meats
-            if(meats.isEmpty()){
-                //nothing happens at this point
-                System.out.println( price + " in the sandwich class no meats");
+            // add meats
+            if(meats.isEmpty()) {
+                // nothing happens at this point
+                System.out.println( price + " in the sandwich class no meats. ");
             } else if(meats.size() == 1){
-                price+=1.00;
-                System.out.println( price + " in the sandwich class 1 meat ");
+                price += 1.00;
+                System.out.println( price + " in the sandwich class 1 meat. ");
             }else{
                 price += (1.00 + (.50 * (meats.size() - 1)));
-                System.out.println( price + " in the sandwich class more than 1");
+                System.out.println( price + " in the sandwich class more than 1. ");
             }
 
-            //add cheeses
+            // add cheeses
             if(cheeses.isEmpty()){
-                //nothing happens at this point
-                System.out.println( price + " in the sandwich class no cheese");
+                // nothing happens at this point
+                System.out.println( price + " in the sandwich class no cheese. ");
             } else if(cheeses.size() == 1){
-                price+=.75;
-                System.out.println( price + " in the sandwich class 1 cheese");
+                price += .75;
+                System.out.println( price + " in the sandwich class 1 cheese. ");
             }else{
                 price += (.75 + (.30 * (cheeses.size() - 1)));
-                System.out.println( price + " in the sandwich class more than 1 cheese");
+                System.out.println( price + " in the sandwich class more than 1 cheese. ");
             }
 
-
-
-            ///pprice for 8 in + toppinng
+          // price for 8 inch + toppings
         } else  if(size == 8){
-            price+=7.00;
+            price += 7.00;
 
-            //add meats
-            if(meats.isEmpty()){
-                //nothing happens at this point
+            // add meats
+            if(meats.isEmpty()) {
+              // nothing happens at this point
             } else if(meats.size() == 1){
-                price+=2.00;
+                price += 2.00;
             }else{
                 price += (2.00 + (1.00 * (meats.size() - 1)));
             }
 
-            //add cheeses
-            if(cheeses.isEmpty()){
-                //nothing happens at this point
-            } else if(cheeses.size() == 1){
-                price+=1.50;
+            // add cheeses
+            if(cheeses.isEmpty()) {
+              // nothing happens at this point
+            } else if(cheeses.size() == 1) {
+                price += 1.50;
             }else{
                 price += (1.5 + (.60 * (cheeses.size() - 1)));
             }
 
-
-
-            //pprice for 12 in + toppinng
+          // price for 12 inch + toppings
         } else {
+            price += 8.50;
 
-            price+=8.50;
-
-            //add meats
+            // add meats
             if(meats.isEmpty()){
-                //nothing happens at this point
+                // nothing happens at this point
             } else if(meats.size() == 1){
-                price+=3.00;
+                price += 3.00;
             }else{
                 price += (3.00 + (1.50 * (meats.size() - 1)));
             }
 
-            //add cheeses
+            // add cheeses
             if(cheeses.isEmpty()){
-                //nothing happens at this point
+                // nothing happens at this point
             } else if(cheeses.size() == 1){
-                price+=2.25;
+                price += 2.25;
             }else{
                 price += (2.25 + (.90 * (cheeses.size() - 1)));
             }
-
-
         }
-
-
         return price;
     }
 
     @Override
     public String toString() {
-        return "Sandwich{" +
-                "size=" + size +
-                ", breadType='" + breadType + '\'' +
-                ", regToppings=" + regToppings +
-                ", meats=" + meats +
-                ", cheeses=" + cheeses +
-                ", toasted=" + toasted +
-                '}';
+        return "S A N D W I C H ⬇\uFE0F" + "\n" + "Size = " + size + "\n" + "Bread Type = " + breadType + "\n" +
+                "Regular Toppings = " + regToppings + "\n" + "Meats = " + meats + "\n" + "Cheeses = " + cheeses + "\n" +
+                "Toasted = " + toasted + "\n" + "Price = $ " + price + "\n";
     }
-
-    //example of a helper method to calculate the price
-    //for each cadwich nased on the size and toppings
-
-
 }

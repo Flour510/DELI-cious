@@ -14,8 +14,6 @@ public class AddChips extends OrderScreen
         {
             // display the add chips screen
             System.out.println();
-            System.out.println("*".repeat(85));
-            System.out.println();
             System.out.println("                                 Choose Your Chips ");
             System.out.println("                                 (All Chips $1.50) ");
             System.out.println();
@@ -25,49 +23,22 @@ public class AddChips extends OrderScreen
             System.out.println();
             System.out.println("Invalid Input. ");
         }
-
         chooseChips(chip);
     }
 
     private void chooseChips (Chips chips)
     {
+        System.out.println();
         System.out.println("Chip Options (Hot Cheetos, Doritos, Lays, Lays BBQ) ");
         System.out.println("Select Chip Type: ");
         String chipType = userInput.nextLine(); // prompt the user for chip type
         chips.setType(chipType);
-        System.out.println("_".repeat(85));
-
-        // prompt the user to make their next move
-        // provides user with an option to add more chips or to exit the application
-        System.out.println();
-        System.out.println("What do you want to do next? ");
-        System.out.println();
-        System.out.println("A - Add More Chips ");
-        System.out.println("B - Return to Place New Order Menu");
-        System.out.println("C - Exit the App ");
-        System.out.println();
-        System.out.println("Enter your choice below: \uD83D\uDC47");
-        Scanner scanner = new Scanner(System.in);
-        String choice = scanner.nextLine();
         System.out.println();
 
-        // process the users choice
-        switch (choice.toUpperCase()) {
-            case "A":
-                display();
-                break;
-            case "B":
-                new OrderScreen();
-                break;
-            case "C":
-                System.out.println();
-                System.out.println("Goodbye for now!");
-                System.out.println("👋");
-                System.exit(1); // can recycle this for all exits
-            default:
-                System.out.println();
-                System.out.println("Invalid Selection. ");
-                break;
-        }
+        System.out.println("*".repeat(85));
+        System.out.println();
+        System.out.println("\uD83D\uDD25 L o o k i n g   g o o d!   W h a t   d o   y o u   w a n t   t o   d o   n e x t? ");
+        System.out.println();
+        System.out.println("*".repeat(85));
     }
 }

@@ -1,0 +1,1 @@
+Chips Type = lays, Price = 1.5

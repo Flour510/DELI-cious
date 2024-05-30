@@ -1,0 +1,1 @@
+Chips Type = lays bbq', Price = 1.5

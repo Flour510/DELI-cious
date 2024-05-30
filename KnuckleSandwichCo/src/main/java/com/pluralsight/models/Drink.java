@@ -5,19 +5,15 @@ public class Drink extends Product
     private String name;
     private String size;
 
-
-    // constructor
     public Drink(String name, String size) {
         this.name = name;
         this.size = size;
-
     }
 
     public Drink() {
 
     }
 
-    // getters and setters
     public String getName() {
         return name;
     }
@@ -34,7 +30,6 @@ public class Drink extends Product
         this.size = size;
     }
 
-
     @Override
     public double calculatePrice() {
 
@@ -50,19 +45,14 @@ public class Drink extends Product
                 price = 3.00;
                 return 3.00;
             default:
-                System.out.println("Unable to read selection");
+                System.out.println("Unable to read selection. ");
 
         }
-
-
         return 0;
     }
 
     @Override
     public String toString() {
-        return "Drink{" +
-                "name='" + name + '\'' +
-                ", size='" + size + '\'' +
-                '}';
+        return "D R I N K ⬇\uFE0F" + "\n" + "Name = " + name + "\n" + "Size = " + size + "\n" + "Price = $ " + price + "\n";
     }
 }

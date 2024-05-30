@@ -1,0 +1,18 @@
+S A N D W I C H ⬇️
+Size = 12
+Bread Type = White
+Regular Toppings = [Lettuce, Peppers]
+Meats = [Asada, Salami, Bacon]
+Cheeses = [Queso Fresco,  Provolone]
+Toasted = true
+Price = $ 17.65
+
+D R I N K ⬇️
+Name = coke
+Size = S
+Price = $ 2.0
+
+C H I P S ⬇️
+Type = Doritos
+Price = $ 1.5
+
