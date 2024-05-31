@@ -52,6 +52,8 @@ When the user is done building their order and chooses option 4 - Checkout, they
 # Interesting Piece of Code
 The code I found particularly interesting was creating pushing the receipet to a CSV file. I could not for the life of me figure out how to implement this to my code, until I asked my instrutor. It was as simple as adding a FileWriter and FileReader in a try/catch and then adding a for loop inside of that. 
 
+# Ability to Print Receipt to CSV File
+![Screenshot 2024-05-30 at 6 13 11 PM](https://github.com/Flour510/DELI-cious/assets/99916123/aa4ea01e-9592-4e15-9041-0fde38508407)
 
 
 
