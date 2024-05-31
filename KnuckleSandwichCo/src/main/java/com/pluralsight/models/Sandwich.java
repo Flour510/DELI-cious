@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Sandwich extends Product
 {
+    // private fields to store the variable information
     private int size;
     private String breadType;
     private List<String> regToppings;
@@ -77,7 +78,7 @@ public class Sandwich extends Product
 
             System.out.println(price + " in the sandwich class. " );
 
-            // add meats
+            // add price for meats
             if(meats.isEmpty()) {
                 // nothing happens at this point
                 System.out.println( price + " in the sandwich class no meats. ");
@@ -85,11 +86,11 @@ public class Sandwich extends Product
                 price += 1.00;
                 System.out.println( price + " in the sandwich class 1 meat. ");
             }else{
-                price += (1.00 + (.50 * (meats.size() - 1)));
+                price += (1.00 + (.50 * (meats.size() - 1))); // calculate price if the meat options is more than 1
                 System.out.println( price + " in the sandwich class more than 1. ");
             }
 
-            // add cheeses
+            // add price for cheeses
             if(cheeses.isEmpty()){
                 // nothing happens at this point
                 System.out.println( price + " in the sandwich class no cheese. ");
@@ -104,19 +105,18 @@ public class Sandwich extends Product
           // price for 8 inch + toppings
         } else  if(size == 8){
             price += 7.00;
-
-            // add meats
+            // add price for meats
             if(meats.isEmpty()) {
-              // nothing happens at this point
+                // nothing happens at this point
             } else if(meats.size() == 1){
                 price += 2.00;
             }else{
                 price += (2.00 + (1.00 * (meats.size() - 1)));
             }
 
-            // add cheeses
+            // add price for cheeses
             if(cheeses.isEmpty()) {
-              // nothing happens at this point
+                // nothing happens at this point
             } else if(cheeses.size() == 1) {
                 price += 1.50;
             }else{
@@ -127,7 +127,7 @@ public class Sandwich extends Product
         } else {
             price += 8.50;
 
-            // add meats
+            // add price for meats
             if(meats.isEmpty()){
                 // nothing happens at this point
             } else if(meats.size() == 1){
@@ -136,7 +136,7 @@ public class Sandwich extends Product
                 price += (3.00 + (1.50 * (meats.size() - 1)));
             }
 
-            // add cheeses
+            // add price for cheeses
             if(cheeses.isEmpty()){
                 // nothing happens at this point
             } else if(cheeses.size() == 1){
@@ -148,8 +148,11 @@ public class Sandwich extends Product
         return price;
     }
 
+    // override method to convert sandwich object to strings
     @Override
     public String toString() {
+        // return a string representation of the sandwich object including size, bread type,
+        // toppings, meats, cheeses, toasted status, and price
         return "S A N D W I C H ⬇\uFE0F" + "\n" + "Size = " + size + "\n" + "Bread Type = " + breadType + "\n" +
                 "Regular Toppings = " + regToppings + "\n" + "Meats = " + meats + "\n" + "Cheeses = " + cheeses + "\n" +
                 "Toasted = " + toasted + "\n" + "Price = $ " + price + "\n";

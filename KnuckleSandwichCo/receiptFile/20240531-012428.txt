@@ -1,0 +1,19 @@
+S A N D W I C H ⬇️
+Size = 12
+Bread Type = White
+Regular Toppings = [Lettuce, Onions, Cucumbers, Mushrooms]
+Meats = [Steak, Salami, Bacon, Chicken]
+Cheeses = [Queso Fresco, Swiss, Cheddar]
+Toasted = true
+Price = $ 20.05
+
+D R I N K ⬇️
+Name = Sprite
+Size = L
+Price = $ 3.0
+
+C H I P S ⬇️
+Type = Lays BBQ
+Price = $ 1.5
+
+Subtotal: $ 24.55

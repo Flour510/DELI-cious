@@ -6,10 +6,11 @@ public class Drink extends Product
     private String size;
 
     public Drink(String name, String size) {
-        this.name = name;
-        this.size = size;
+        this.name = name; // sets the name of the drink
+        this.size = size; // set the size of the drink
     }
 
+    // default constructor
     public Drink() {
 
     }
@@ -30,6 +31,7 @@ public class Drink extends Product
         this.size = size;
     }
 
+    // override method to calculate the price of the drink based on its size
     @Override
     public double calculatePrice() {
 
@@ -51,8 +53,10 @@ public class Drink extends Product
         return 0;
     }
 
+    // override method to convert drink object to strings
     @Override
     public String toString() {
+        // returns a string representation of drink object including name, size, and price
         return "D R I N K ⬇\uFE0F" + "\n" + "Name = " + name + "\n" + "Size = " + size + "\n" + "Price = $ " + price + "\n";
     }
 }

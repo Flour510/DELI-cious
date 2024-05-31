@@ -29,8 +29,8 @@ public class Checkout
         System.out.println();
         System.out.println("-".repeat(85));
 
-        subtotal = order.calculateTotal();
-        for(Product prod:order.displayOrderDetails())
+        subtotal = order.calculateTotal(); // calculate subtotal
+        for(Product prod:order.displayOrderDetails()) // display order details
         {
             System.out.println(prod);
         }
@@ -47,6 +47,7 @@ public class Checkout
 
     public void createCsv(Order order)  {
         LocalDateTime now = LocalDateTime.now();
+        // generate the file name based on current date and time
         String fileName = "receiptFile/" + now.format(DateTimeFormatter.ofPattern("yyyyMMdd-hhmmss")) + ".txt";
         File file = new File(fileName);
 
@@ -54,11 +55,11 @@ public class Checkout
             PrintWriter writer = new PrintWriter(receiptWriter);
         )
         {
-            for(Product prod:order.displayOrderDetails())
+            for(Product prod:order.displayOrderDetails()) // write order details to the file
             {
                 writer.println(prod);
             }
-            writer.println("Subtotal: $ " + subtotal);
+            writer.println("Subtotal: $ " + subtotal); // writes subtotal to the file
         }
         catch (IOException exception)
         {

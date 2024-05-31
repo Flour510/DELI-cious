@@ -37,7 +37,7 @@ public class AddSandwich
                 System.out.println();
                 System.out.println("*".repeat(85));
 
-                String bread = selectBread();
+                String bread = selectBread(); // select bread type
                 sandwich.setBreadType(bread);
 
                 selectSize(sandwich);
@@ -77,6 +77,8 @@ public class AddSandwich
             System.out.println("Select Meat's below (Please separate your selections using commas): \uD83D\uDC47 ");
             String meatType = userInput.nextLine(); // prompt the user for meat type
 
+            // splits the input string `meatType` by commas (,) to separate different meat options,
+            // then convert the resulting array into a List<String> using java stream
             List<String> meatsArr = Arrays.stream(meatType.split(",")).toList();
             sandwich.setMeats(meatsArr);
             System.out.println("_".repeat(85));

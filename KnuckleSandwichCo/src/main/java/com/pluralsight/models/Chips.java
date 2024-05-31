@@ -4,13 +4,14 @@ public class Chips extends Product
 {
     private String type;
 
+    // constructor with a parameter for type
     public Chips(String type) {
-        this.type = type;
-        price = 1.50;
+        this.type = type; // set the type of chips
+        price = 1.50; // set the price of chips
     }
 
     public Chips() {
-        price = 1.50;
+        price = 1.50; // default price of chips
     }
 
     public String getType() {
@@ -26,8 +27,10 @@ public class Chips extends Product
         return price;
     }
 
+    // override method to convert chips object to string
     @Override
     public String toString() {
+        // returns a string representation of chips object including type and price
         return "C H I P S ⬇\uFE0F" + "\n" + "Type = " + type + "\n" + "Price = $ " + price + "\n";
     }
 }

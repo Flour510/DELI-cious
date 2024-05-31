@@ -32,7 +32,7 @@ public class UserInterface
                 switch (choice)
                 {
                     case 1:
-                        OrderScreen orderScreen = new OrderScreen();
+                        OrderScreen orderScreen = new OrderScreen(); // creates an instance of order class
                         orderScreen.display();
                         break;
                     case 0:

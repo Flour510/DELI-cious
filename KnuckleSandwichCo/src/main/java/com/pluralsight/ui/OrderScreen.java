@@ -14,9 +14,13 @@ public class OrderScreen
         System.out.println();
         System.out.println("*".repeat(85));
 
+        // creates an instance of the order class to manage the current order
         Order order = new Order();
+
+        // continuously prompts the user for input until the order is completed or canceled
         while (true) {
             try {
+                // menu
                 System.out.println();
                 System.out.println("1) Add Sandwich ");
                 System.out.println("2) Add Drink ");
@@ -31,10 +35,10 @@ public class OrderScreen
 
                 switch (choice) {
                     case 1:
-                        AddSandwich addSandwich = new AddSandwich(); // object
-                        Sandwich sandwich = new Sandwich();
-                        addSandwich.display(sandwich);
-                        order.addSandwich(sandwich); // add to the order
+                        AddSandwich addSandwich = new AddSandwich(); // creates an instance of AddSandwich class
+                        Sandwich sandwich = new Sandwich(); // create a new instance of sandwich class
+                        addSandwich.display(sandwich); // displays options for adding a sandwich
+                        order.addSandwich(sandwich); // adds to the order
                         order.displayOrderDetails();
                         break;
                     case 2:
@@ -52,8 +56,8 @@ public class OrderScreen
                         break;
                     case 4:
                         Checkout checkout = new Checkout();
-                        checkout.display(order);
-                        checkout.createCsv(order);
+                        checkout.display(order); // displays order summary to the checkout screen
+                        checkout.createCsv(order); // pushes the order details to a csv file
                         break;
                     case 0:
                         System.out.println();

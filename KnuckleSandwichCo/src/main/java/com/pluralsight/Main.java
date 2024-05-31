@@ -12,7 +12,7 @@ import com.pluralsight.ui.UserInterface;
 
 public class Main {
     public static void main(String[] args) {
-        UserInterface ui = new UserInterface();
+        UserInterface ui = new UserInterface(); // creates an instance of the UI class
         ui.display();
     }
 }
