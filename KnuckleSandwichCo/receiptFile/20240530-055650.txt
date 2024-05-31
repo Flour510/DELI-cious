@@ -1,0 +1,19 @@
+S A N D W I C H ⬇️
+Size = 12
+Bread Type = White
+Regular Toppings = [Lettuce,  Tomatoe,  Cucumbers,  Pickles]
+Meats = [Ham,  Steak,  Bacon]
+Cheeses = [American,  Queso Fresco,  Swiss]
+Toasted = true
+Price = $ 18.55
+
+D R I N K ⬇️
+Name = Sprite
+Size = L
+Price = $ 3.0
+
+C H I P S ⬇️
+Type = Hot Cheetos
+Price = $ 1.5
+
+Subtotal: $ 23.05

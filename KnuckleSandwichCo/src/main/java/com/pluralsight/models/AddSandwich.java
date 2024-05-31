@@ -12,7 +12,7 @@ public class AddSandwich
         {
             try
             {
-                // display the add sandwich screen
+                // display the add / build sandwich screen
                 System.out.println();
                 System.out.println();
                 System.out.println("                                 Build Your Sandwich ");

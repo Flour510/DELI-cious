@@ -34,7 +34,6 @@ public class AddChips extends OrderScreen
         String chipType = userInput.nextLine(); // prompt the user for chip type
         chips.setType(chipType);
         System.out.println();
-
         System.out.println("*".repeat(85));
         System.out.println();
         System.out.println("\uD83D\uDD25 L o o k i n g   g o o d!   W h a t   d o   y o u   w a n t   t o   d o   n e x t? ");

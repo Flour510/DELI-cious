@@ -28,7 +28,6 @@ public class Checkout
         System.out.println("C a s h i e r: Flower");
         System.out.println();
         System.out.println("-".repeat(85));
-        System.out.println();
 
         subtotal = order.calculateTotal();
         for(Product prod:order.displayOrderDetails())
@@ -41,7 +40,6 @@ public class Checkout
         System.out.println("-".repeat(85));
         System.out.println();
         System.out.println("               T h a n k   Y o u!   C h e c k o u t   C o m p l e t e. ");
-        System.out.println();
         System.out.println("          \uD83E\uDD24 G e t   r e a d y   t o   u n w r a p   h a p p i n e s s! \uD83D\uDE0B ");
         System.out.println();
         System.out.println("*".repeat(85));
